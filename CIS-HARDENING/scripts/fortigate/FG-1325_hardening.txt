@@ -1,0 +1,16 @@
+# FG-1325 - Hardening manual (reglas F01 a F03)
+# F01 - Administrar solo por HTTPS y SSH (sin HTTP ni Telnet)
+config system interface
+    edit "port1"
+        set allowaccess ping https ssh
+    next
+    edit "port2"
+        set allowaccess ping https ssh
+    next
+end
+# F02 - Timeout de administracion de 5 minutos
+# F03 - Banner de aviso antes del login
+config system global
+    set admintimeout 5
+    set pre-login-banner enable
+end

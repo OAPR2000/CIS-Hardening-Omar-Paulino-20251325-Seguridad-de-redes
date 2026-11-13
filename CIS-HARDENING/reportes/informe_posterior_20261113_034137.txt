@@ -1,0 +1,47 @@
+==============================================================================
+INFORME POSTERIOR AL HARDENING
+Practica CIS Benchmark - Omar Paulino 20251325
+Fecha: 2026-11-13 03:41:37
+==============================================================================
+
+Equipo: R1-1325 (10.13.25.1)
+------------------------------------------------------------------------------
+Regla Antes    Despues  Recomendacion
+C01   CUMPLE   CUMPLE   Solo SSH en las lineas VTY (sin Telnet)
+                       Todas las VTY solo SSH
+C02   CUMPLE   CUMPLE   exec-timeout de 5 min en consola y VTY
+                       exec-timeout <= 10 min
+C03   CUMPLE   CUMPLE   Banner de aviso (banner motd)
+                       Banner configurado
+C04   CUMPLE   CUMPLE   Cifrar contrasenas (service password-encryption)
+                       Activado
+C05   CUMPLE   CUMPLE   Deshabilitar el servidor HTTP/HTTPS
+                       HTTP deshabilitado
+C06   CUMPLE   CUMPLE   Solo SSH version 2 (ip ssh version 2)
+                       SSH solo version 2
+
+Equipo: SW-1325 (10.13.25.2)
+------------------------------------------------------------------------------
+Regla Antes    Despues  Recomendacion
+C01   FALLA    CUMPLE   Solo SSH en las lineas VTY (sin Telnet)
+                       Todas las VTY solo SSH
+C02   FALLA    CUMPLE   exec-timeout de 5 min en consola y VTY
+                       exec-timeout <= 10 min
+C03   FALLA    CUMPLE   Banner de aviso (banner motd)
+                       Banner configurado
+C04   FALLA    CUMPLE   Cifrar contrasenas (service password-encryption)
+                       Activado
+C05   FALLA    CUMPLE   Deshabilitar el servidor HTTP/HTTPS
+                       HTTP deshabilitado
+C06   FALLA    CUMPLE   Solo SSH version 2 (ip ssh version 2)
+                       SSH solo version 2
+
+Equipo: FG-1325 (172.13.25.1)
+------------------------------------------------------------------------------
+Regla Antes    Despues  Recomendacion
+F01   CUMPLE   CUMPLE   Administrar solo por HTTPS/SSH (sin HTTP ni Telnet)
+                       Solo HTTPS y SSH
+F02   CUMPLE   CUMPLE   Timeout de administracion de 5 minutos
+                       admintimeout 5 min
+F03   CUMPLE   CUMPLE   Banner de aviso antes del login
+                       pre-login-banner enable

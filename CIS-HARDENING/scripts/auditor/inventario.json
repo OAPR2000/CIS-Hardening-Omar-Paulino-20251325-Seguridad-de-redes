@@ -1,0 +1,25 @@
+[
+  {
+    "name": "R1-1325",
+    "device_type": "cisco_ios",
+    "host": "10.13.25.1",
+    "username": "admin1325",
+    "password": "Admin#1325",
+    "secret": "Enable#1325"
+  },
+  {
+    "name": "SW-1325",
+    "device_type": "cisco_ios",
+    "host": "10.13.25.2",
+    "username": "admin1325",
+    "password": "Admin#1325",
+    "secret": "Enable#1325"
+  },
+  {
+    "name": "FG-1325",
+    "device_type": "fortinet",
+    "host": "172.13.25.1",
+    "username": "admin",
+    "password": "Forti1325!"
+  }
+]

@@ -1,0 +1,20 @@
+! R1-1325 - Hardening manual (reglas C01 a C06)
+configure terminal
+! C06 - Solo SSH version 2
+ip ssh version 2
+! C01 y C02 - Solo SSH en VTY y timeout de 5 minutos
+line vty 0 4
+ transport input ssh
+ exec-timeout 5 0
+line con 0
+ exec-timeout 5 0
+exit
+! C03 - Banner de aviso
+banner motd #ACCESO RESTRINGIDO - Solo personal autorizado - Lab CIS 20251325#
+! C04 - Cifrar contrasenas
+service password-encryption
+! C05 - Deshabilitar el servidor HTTP/HTTPS
+no ip http server
+no ip http secure-server
+end
+write memory

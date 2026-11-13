@@ -1,0 +1,8 @@
+# FG-1325 - Unico paso por consola: IP de port2 para poder abrir la GUI desde la LAN
+# Usuario admin, contrasena vacia -> nueva contrasena Forti1325!
+config system interface
+    edit "port2"
+        set ip 172.13.25.1 255.255.255.252
+        set allowaccess ping https
+    next
+end

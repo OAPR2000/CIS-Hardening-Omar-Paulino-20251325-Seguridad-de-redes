@@ -1,0 +1,30 @@
+! R1-1325 - Configuracion base (funcional pero insegura, antes del hardening)
+enable
+configure terminal
+hostname R1-1325
+no ip domain-lookup
+ip domain-name omar1325.local
+enable secret Enable#1325
+username admin1325 privilege 15 secret Admin#1325
+interface GigabitEthernet0/0
+ ip address 172.13.25.2 255.255.255.252
+ ip tcp adjust-mss 1360
+ no shutdown
+interface GigabitEthernet1/0
+ ip address 10.13.25.1 255.255.255.0
+ ip tcp adjust-mss 1360
+ no shutdown
+exit
+ip route 0.0.0.0 0.0.0.0 172.13.25.1
+ip http server
+crypto key generate rsa modulus 2048
+line con 0
+ password Consola1325
+ exec-timeout 0 0
+ login local
+line vty 0 4
+ exec-timeout 0 0
+ login local
+ transport input telnet ssh
+end
+write memory
