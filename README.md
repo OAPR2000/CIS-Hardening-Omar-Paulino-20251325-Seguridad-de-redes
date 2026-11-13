@@ -4,9 +4,7 @@
 
 ## Video de demostración
 
-[![Video de demostración](CIS-HARDENING/images/01_topologia.png)](ENLACE_DEL_VIDEO)
-
-**Enlace al video:** ENLACE_DEL_VIDEO
+https://youtu.be/F-4m10RsaMA?si=7EtY7lmx5JMVcjPL
 
 ---
 
